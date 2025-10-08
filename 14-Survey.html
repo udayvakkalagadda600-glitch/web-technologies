@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Usage Survey</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: darkblue;
+        }
+        form{
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgb(249, 249, 249);
+        }
+        fieldset{
+            border: 2px solid rgb(204, 204, 204);
+            padding: 15px;
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+        input,select,textarea{
+            padding: 6px;
+            margin-top: 5px;
+            background-color: rgb(242, 242, 242);
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 3px;
+        }
+        button{
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 3px;
+            background-color: rgb(70, 130, 180);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Usage Survey Form</h1>
+    <form>
+        <fieldset>
+            <legend>User Details</legend>
+            
+            <label for="name">Name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="First" required>
+            <input type="text" id="lname" name="lname" placeholder="Last" required><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="10" max="100" required><br><br>
+
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Mobile Usage</legend>
+
+            <label for="brand">Which mobile brand do you use?</label><br>
+            <input type="text" id="brand" name="brand" placeholder="e.g., Samsung, Apple" required><br><br>
+
+            <label for="os">Which operating system do you prefer?</label><br>
+            <select id="os" name="os">
+                <option value="android">Android</option>
+                <option value="ios">iOS</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="usage">How many hours do you use your mobile daily?</label><br>
+            <input type="radio" id="less2" name="usage" value="<2 hours">
+            <label for="less2">Less than 2 hours</label><br>
+            <input type="radio" id="2to5" name="usage" value="2-5 hours">
+            <label for="2to5">2-5 hours</label><br>
+            <input type="radio" id="5to8" name="usage" value="5-8 hours">
+            <label for="5to8">5-8 hours</label><br>
+            <input type="radio" id="more8" name="usage" value=">8 hours">
+            <label for="more8">More than 8 hours</label><br><br>
+
+            <label for="purpose">What do you mostly use your mobile for?</label><br>
+            <input type="checkbox" id="social" name="purpose" value="Social Media">
+            <label for="social">Social Media</label>
+            <input type="checkbox" id="gaming" name="purpose" value="Gaming">
+            <label for="gaming">Gaming</label>
+            <input type="checkbox" id="study" name="purpose" value="Study">
+            <label for="study">Study</label>
+            <input type="checkbox" id="work" name="purpose" value="Work">
+            <label for="work">Work</label>
+            <input type="checkbox" id="otherPurpose" name="purpose" value="Other">
+            <label for="otherPurpose">Other</label><br><br>
+
+            <label for="screenTime">Do you think your screen time is healthy?</label><br>
+            <select id="screenTime" name="screenTime">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="notSure">Not Sure</option>
+            </select><br><br>
+
+            <label for="suggestions">Any suggestions to reduce mobile addiction?</label><br>
+            <textarea id="suggestions" name="suggestions" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
